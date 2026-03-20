@@ -1,18 +1,13 @@
-from config import Config
-from security.encryption import SecureData
+from core.data_collector import DataCollector
 
 def main():
-    print("🚀 GMPX-PRO V1 Starting...")
+    print("🚀 GMPX-PRO V1 Running Data Collector...")
 
-    secure = SecureData(Config.SECRET_KEY)
+    collector = DataCollector()
+    data = collector.collect_all()
 
-    sample = "Gold Signal: BUY"
-    encrypted = secure.encrypt(sample)
-
-    print("Encrypted:", encrypted)
-
-    decrypted = secure.decrypt(encrypted)
-    print("Decrypted:", decrypted)
+    print("📊 Market Data:")
+    print(data)
 
 if __name__ == "__main__":
     main()
