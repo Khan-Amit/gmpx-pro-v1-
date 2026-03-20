@@ -1,14 +1,7 @@
 class SignalEngine:
 
     def compute(self, currency, risk, momentum):
-        # weights (can tune later)
-        score = (
-            0.4 * currency +
-            0.3 * risk +
-            0.3 * momentum
-        )
-
-        return score
+        return 0.4 * currency + 0.3 * risk + 0.3 * momentum
 
     def classify(self, score):
         if score > 0.65:
