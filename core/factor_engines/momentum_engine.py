@@ -1,6 +1,3 @@
 class MomentumEngine:
-
-    def compute(self, features):
-        gold = features["gold_norm"]
-
-        return gold
+    def compute(self, f):
+        return f["gold_norm"]
