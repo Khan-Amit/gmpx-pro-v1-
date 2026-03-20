@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Data files
+data/
+*.csv
+*.json
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+
+# Models
+models/
+*.pkl
+*.h5
+
+# OS
+.DS_Store
